@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Collage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<video autoplay loop muted playsinline class="video-background">
+        <source src="galaxia.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+    </video>
+
+    <header>
+        <h1>Feliz aniversario princesa</h1>
+		<p>Te hice una pequeña colección de detallitos que incluyen desde un collaje, un Qr a una noticia. </p>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap" rel="stylesheet">
+    </header>
+	<div class="qr-container">
+        <p>Escanea para más información</p>
+        <img src="qr.png" alt="Código QR" width="100">
+    </div>
+	<div class="noticia-container">
+        <a href="docs/noticia.pdf" class="noticia-link">Noticia</a>
+        <p>Últimas novedades sobre el universo</p>
+    </div>
+
+    <main>
+        <div class="collage">
+            <img src="img1.jpg" alt="Imagen 1">
+            <img src="img2.jpg" alt="Imagen 2">
+            <img src="img3.jpg" alt="Imagen 3">
+            <img src="img4.jpg" alt="Imagen 4">
+			<img src="img5.jpg" alt="Imagen 5">
+        </div>
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/2oooF0_1390?si=le5gENeWoKgz7C3r" 
+                frameborder="0" allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="texto">
+            <p>Hola, amorcito.<br>
+			¿Cómo va tu día? Espero que bastante bien, princesa hermosa. <br>
+			Bueno, ummm... para nuestro quinto aniversario, y el tercero y último de estas vacaciones "separadas", quería hacer algo un poco más innovador. <br> 
+			Por eso, creé una página web desde cero. La verdad, estuvo un poco complicado aprender sobre esto, <br>			
+			por eso te dije que aprendí algo desde cero, como si fuera una carrera. Me refería a computación y programación. <br>
+			<br>
+			Pero, amor... ¿qué es aprender a programar una página? ¡NADAAA! si se trata de ti. Tú te mereces el mundo entero y mucho más.
+			<br>
+			En fin, no vinimos a eso, vinimos a conversar un rato.<br>
+			¿Cómo estás? Aparte de hermosa, jsjsjs. Bueno, como puedes ver en la página, tenemos tres cosas: <br>
+			<br>
+				1. Un QR a la izquierda.<br>
+				2. Una viñeta de una noticia a la derecha.<br>
+				3. Y un link de un video <br>
+				<br>
+				La contraseña esta escondida entre el QR, la noticia y este texto. <br>
+				<br>
+			Pero primero, para el orden de la contraseña, tienes que ir al QR. Luego, procedes con la noticia. <br>
+			Y por último, la palabra clave es (-.-. .- .-.. ...- .- .-.-.) (es clave morse, por cierto).<br>
+			RECUERDA PONER EL ESPACIO ENTRE LAS 3 PALABRAS
+			</p>
+        </div>
+			<div class="hidden-section">
+			<input type="password" id="passwordInput" placeholder="Ingresa la contraseña">
+			<button onclick="checkPassword()">Desbloquear</button>
+			<p id="hiddenMessage" style="display: none;">🌟 https://youtu.be/G77Ne8kv1Bo?si=ONYHqajoh87BTnjf  🌟</p>
+		</div>
+
+    </main>
+	<script>
+		function checkPassword() {
+			var password = document.getElementById("passwordInput").value;
+			var hiddenMessage = document.getElementById("hiddenMessage");
+        
+			if (password === "amor estoy calva") {  hiddenMessage.style.display = "block";
+			} 
+			else {
+				alert("Contraseña incorrecta. Inténtalo de nuevo.");
+			}
+		}
+	</script>
+
+</body>
+</html>
